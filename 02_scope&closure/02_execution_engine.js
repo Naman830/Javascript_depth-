@@ -19,4 +19,4 @@ Second, during execution, the Engine looks up the variable in Scope and assigns 
 // During the Code Component phase, code executes line by line.
 //
 // When a function is invoked, a new Execution Context is created with its own
-// Memory Component and Code Component.
+// Memory Component and Code Component inside the code component
