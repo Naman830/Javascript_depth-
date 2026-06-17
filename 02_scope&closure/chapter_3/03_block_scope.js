@@ -36,3 +36,17 @@ console.log(secret); //→ ReferenceError ✅
 // This is CRUCIAL for closures (see Chapter 5!)
 
 */
+
+// 3. Const
+
+if (true) {
+  const MAX = 100; // block-scoped like let
+  // MAX = 200; → TypeError: Assignment to constant variable ✅
+  console.log(MAX); // 100
+}
+// console.log(MAX); → ReferenceError ✅
+
+// Note: const means the BINDING is constant, not the value!
+const arr = [1, 2, 3];
+arr.push(4); // This WORKS — the array itself changed, but 'arr' still points to it
+// arr = []; → TypeError — you can't reassign the binding
