@@ -14,7 +14,6 @@ In simple terms, it is like writing new code while the program is already runnin
 
 Normally lexical scope is fixed when we write the code, but eval() cheats. It can add new variables or functions into the current scope at runtime.
 
-
 Here eval() runs "var b = 3;" inside foo().
 
 So a new variable b is created inside foo() scope. This local b shadows the global b.
