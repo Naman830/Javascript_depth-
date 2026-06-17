@@ -1,0 +1,10 @@
+Chapter 1 — Key takeaways
+
+1. Scope is the rulebook for finding variables — it defines where they live and who can access them.
+2. JavaScript COMPILES code before running it — declarations are registered at compile time.
+3. LHS = looking for a container to put a value in [Memory Component]. RHS = looking for a value to read. [Code Component]
+4. Nested scopes form a chain — lookup travels upward until found or global scope reached.
+
+Errors and Mistakes
+1. Undeclared LHS in non-strict mode = silent global variable creation. Use strict mode always.
+2. Undeclared RHS anywhere = ReferenceError. This is always an error.
