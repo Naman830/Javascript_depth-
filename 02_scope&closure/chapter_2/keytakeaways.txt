@@ -1,0 +1,9 @@
+Chapter 2 — Key takeaways
+
+1. Lexical scope is determined WHERE you write code (author time), not WHERE you call it (runtime).
+2. Scope bubbles nest inside each other. A function creates its own bubble.
+3. Lookup travels from innermost to outermost — stops at first match (shadowing).
+
+Mistakes or don't
+1. eval() can modify lexical scope at runtime — hurts performance, avoid it.
+2. with creates a runtime scope from an object — deprecated, can leak globals, avoid it.
