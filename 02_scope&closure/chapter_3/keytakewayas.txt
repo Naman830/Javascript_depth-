@@ -1,0 +1,10 @@
+Chapter 3 — Key takeaways
+
+1. Functions create scope bubbles — great for hiding private implementation details.
+2. IIFEs create scope without polluting the enclosing scope with a function name.
+3. var is function-scoped and hoisted. let/const are block-scoped (curly braces).
+4. let in for-loop creates a NEW binding per iteration — critical for closures!
+5. const means the binding is constant — the value itself can still mutate (objects/arrays).
+
+Mistake
+1. var inside if/for blocks leaks to the enclosing function scope — leads to bugs.
