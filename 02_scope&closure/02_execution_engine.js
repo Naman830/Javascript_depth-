@@ -2,9 +2,13 @@
 var a = 2;
 
 /*
+The three characters who process your code
+
 1. Engine: Responsible for starting and finishing compilation and execution in JavaScript.
 2. Compiler: Handles all the work of parsing and code generation.
 3. Scope: Maintains declared variables and enforces rules on them for the currently executing code.
+
+They work as a team — Compiler declares, Engine executes, Scope referees.
 
 Two distinct actions are taken for a variable assignment:
 First, the Compiler declares a variable (if it has not already been declared in the current scope).
