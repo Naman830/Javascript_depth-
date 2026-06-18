@@ -1,7 +1,6 @@
 // When an inner scope has a variable with the same name as an outer scope, the inner one shadows the outer one. The lookup stops at the inner one — the outer is invisible (but still exists).
 
 var name = "Global";
-
 function outer() {
   var name = "Outer"; // shadows global 'name'
 
