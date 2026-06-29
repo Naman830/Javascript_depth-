@@ -1,0 +1,11 @@
+Chapter 1 — What is Scope?
+
+Chapter 2 — Lexical Scope
+
+Chapter 3 — Function vs Block Scope
+
+Chapter 4 — Hoisting
+
+Chapter 5 — Closures
+
+Chapter 6 — The Module Pattern
