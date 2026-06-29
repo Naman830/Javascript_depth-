@@ -13,3 +13,21 @@ for (var i = 1; i <= 5; i++) {
 // WHY? All 5 timer functions close over the SAME 'i' variable.
 // 'var i' is function-scoped — there's only ONE 'i' in the whole loop.
 // By the time timers run, the loop is done and i=6.
+
+// =======================================================================
+// =======================================================================
+// =======================================================================
+// =======================================================================
+
+// 2. Fix: IIFE
+for (var i = 1; i <= 5; i++) {
+  (function (j) {
+    // IIFE creates a NEW scope per iteration, captures 'i' as 'j'
+    setTimeout(function timer() {
+      console.log(j); // j is a fresh copy in EACH iteration's scope
+    }, j * 1000);
+  })(i); // pass current i as argument
+}
+// Now logs: 1, 2, 3, 4, 5 ✅
+// Why? Each IIFE creates its own scope with its own 'j'.
+// Each timer closes over a different 'j'.
