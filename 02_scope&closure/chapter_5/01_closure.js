@@ -39,3 +39,26 @@ console.log(counter.count); // undefined — count is private! 🔒
 // =====================================================================
 // =====================================================================
 // =====================================================================
+
+/*
+How closure actually works internally
+
+When makeCounter() executes, it creates a scope object in memory. Normally, when a function returns, its scope is garbage-collected. But if any inner function still holds a reference to that scope (via closure), the engine keeps it alive.
+
+1
+makeCounter() is called
+A new scope is created. count is declared in it as 0.
+
+2
+Inner functions are created
+increment, decrement, reset — each carries a reference to the scope where count lives.
+
+3
+makeCounter() returns
+Its execution is done. BUT — the three functions still hold scope references. The engine can't delete it.
+
+4
+counter.increment() is called later
+The function reaches into its backpack (closure scope), finds count, updates it. The update persists for next call!
+
+*/
