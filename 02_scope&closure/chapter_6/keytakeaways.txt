@@ -1,0 +1,11 @@
+Chapter 6 — Key takeaways
+
+1. The module pattern = outer function + returned inner functions + closure over private data.
+
+2. The outer function must be called (at least once) to create the private scope.
+
+3. Singleton modules: wrap in IIFE so only one instance is created.
+
+4. Modules can expose a mutable public API — inner functions can modify it via closure.
+
+5. ES6 modules (import/export) are built into the language — they use the same closure mechanics.
