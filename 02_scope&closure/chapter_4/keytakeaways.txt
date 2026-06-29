@@ -1,0 +1,11 @@
+Chapter 4 — Key takeaways
+
+1. var declarations are hoisted to the top of their function scope, initialized as undefined.
+2. Function declarations are fully hoisted (name + body). You can call them before they appear.
+3. Function expressions (var fn = function(){}) — only the var is hoisted, NOT the function body.
+4. Functions hoist before variables. Duplicate var declarations are ignored.
+
+Mistakes 
+1. let and const are in the Temporal Dead Zone until their line — accessing before = ReferenceError.
+
+2. Duplicate function declarations in the same scope: last one wins — messy, avoid this!
