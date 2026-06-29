@@ -2,11 +2,12 @@
 
 // 1. It is Broken due to using var
 
-for (var i = 1; i <= 5; i++) {
-  setTimeout(function timer() {
-    console.log(i); // What do you expect?
-  }, i * 1000);
-}
+// for (var i = 1; i <= 5; i++) {
+//   setTimeout(function timer() {
+//     console.log(i); // What do you expect?
+//   }, i * 1000);
+// }
+
 // Expected: 1, 2, 3, 4, 5 (one per second)
 // Actual:   6, 6, 6, 6, 6
 //
@@ -20,14 +21,33 @@ for (var i = 1; i <= 5; i++) {
 // =======================================================================
 
 // 2. Fix: IIFE
-for (var i = 1; i <= 5; i++) {
-  (function (j) {
-    // IIFE creates a NEW scope per iteration, captures 'i' as 'j'
-    setTimeout(function timer() {
-      console.log(j); // j is a fresh copy in EACH iteration's scope
-    }, j * 1000);
-  })(i); // pass current i as argument
-}
+
+// for (var i = 1; i <= 5; i++) {
+//   (function (j) {
+//     // IIFE creates a NEW scope per iteration, captures 'i' as 'j'
+//     setTimeout(function timer() {
+//       console.log(j); // j is a fresh copy in EACH iteration's scope
+//     }, j * 1000);
+//   })(i); // pass current i as argument
+// }
+
 // Now logs: 1, 2, 3, 4, 5 ✅
 // Why? Each IIFE creates its own scope with its own 'j'.
 // Each timer closes over a different 'j'.
+
+// =======================================================================
+// =======================================================================
+// =======================================================================
+// =======================================================================
+
+for (let i = 1; i <= 5; i++) {
+  setTimeout(function timer() {
+    console.log(i); // logs: 1, 2, 3, 4, 5 ✅
+  }, i * 1000);
+}
+
+// Why does let fix it? ES6 spec says: let in a for-loop head
+// creates a NEW binding of 'i' for EACH iteration.
+// It's as if a new 'let i' is declared every loop cycle.
+// Each timer closes over its OWN 'i' — different ones!
+// This is the modern, clean solution. Prefer this always.
