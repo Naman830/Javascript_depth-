@@ -1,0 +1,1 @@
+// You think you're cooking (executing) the recipe line by line. But secretly, before cooking, a prep chef (the Compiler) reads the entire recipe and sets out ALL the ingredients on the counter first (declarations). Then you start cooking. That "pre-setting" is hoisting.

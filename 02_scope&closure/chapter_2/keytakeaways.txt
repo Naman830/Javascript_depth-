@@ -6,4 +6,4 @@ Chapter 2 — Key takeaways
 
 Mistakes or don't
 1. eval() can modify lexical scope at runtime — hurts performance, avoid it.
-2. with creates a runtime scope from an object — deprecated, can leak globals, avoid it.
+2. with() creates a runtime scope from an object — deprecated, can leak globals, avoid it.
