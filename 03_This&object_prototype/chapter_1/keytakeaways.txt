@@ -1,0 +1,7 @@
+📚 Revision Summary
+→ 'this' is NOT a reference to the function itself.
+→ 'this' is NOT a reference to the function's lexical scope.
+→ 'this' is a runtime binding — determined by how the function is called.
+→ Where a function is declared has nothing to do with what 'this' will be.
+→ The call-site (where a function is invoked) determines 'this'.
+
