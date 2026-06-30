@@ -1,0 +1,11 @@
+Chapter 1: What is this? — "this Or That?"
+
+Chapter 2: The 4 Rules — "this All Makes Sense Now!"
+
+Chapter 3: Objects
+
+Chapter 4: Mixing (Up) "Class" Objects
+
+Chapter 5: Prototypes — "[[Prototype]]"
+
+Chapter 6: Behavior Delegation — "the right JavaScript"
