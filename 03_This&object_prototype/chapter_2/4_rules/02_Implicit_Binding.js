@@ -22,6 +22,8 @@ var obj1 = {
 
 obj1.obj2.foo(); // 42 — 'this' is obj2, not obj1
 
+// Simple without refrence of this keyword shows undefined
+
 // ⚠️ IMPLICIT LOSS — the most common bug:
 var bar = obj.foo; // bar is now just a reference to foo itself
 var a = "oops, global";

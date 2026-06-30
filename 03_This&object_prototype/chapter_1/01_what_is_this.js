@@ -32,10 +32,3 @@ console.log(identify(me)); // "KYLE"
 console.log(this);
 
 // this keyword works different in strict and non-strict mode and value depends on it
-// inside function
-// this object in function is different
-function x() {
-  //"use strict";
-  console.log(this);
-}
-x();
