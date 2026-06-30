@@ -16,6 +16,7 @@ for (var i = 0; i < 10; i++) {
 }
 
 console.log(foo.count); // 0 -- WTF?!
+
 // this.count++ was incrementing a GLOBAL variable called count, not foo.count!
 // foo.count is still 0 because 'this' inside foo() never pointed at foo
 
