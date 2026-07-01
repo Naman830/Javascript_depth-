@@ -17,7 +17,6 @@ Arrow Function
 // ============================================================
 
 // This arrow function is created inside the global scope.
-
 // So it takes the global object's 'this'
 // (window in browsers).
 
@@ -32,3 +31,16 @@ const student = {
 // Calling through student DOES NOT matter.
 // Arrow functions don't care who called them.
 student.printName();
+
+const student_1 = {
+  name: "Naman",
+  x: function () {
+    const printName = () => {
+      console.log(this.name);
+    };
+    printName();
+  },
+};
+
+// This student_1 will show the name Naman because now this is lexical scope of student_1
+student_1.x();
