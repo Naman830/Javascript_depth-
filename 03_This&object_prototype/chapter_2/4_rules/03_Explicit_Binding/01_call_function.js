@@ -1,4 +1,5 @@
-// Using call(), apply(), or bind() to directly specify what 'this' will be.
+// Using call(), apply(), or bind() to directly specify what 'this'
+// call() → arguments are passed one by one.
 
 // This is my first obj
 const student = {
